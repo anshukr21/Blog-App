@@ -25,7 +25,8 @@ var collection *mongo.Collection
 func init() {
 	clientOption := options.Client().ApplyURI(connectionString)
 
-	//connect to mongodb //using TODO is preferrable
+	//connect to mongodb
+	//using TODO is preferrable, could have used background also but it will run in background
 	client, err := mongo.Connect(context.TODO(), clientOption)
 
 	if err != nil {
